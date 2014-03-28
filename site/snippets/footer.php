@@ -1,1 +1,2 @@
-<!-- footer snippet -->
+  </body>
+</html>
