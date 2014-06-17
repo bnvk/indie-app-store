@@ -1,1 +1,142 @@
-/* your css code */
+/** Reset **/
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, main, nav, section, summary {
+  display: block;
+}
+
+/** Clearfix **/
+.cf:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 100%;
+  max-width: 50em;
+  margin: 0 auto 9em;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+/** Main Header **/
+.header {
+  border-bottom: 2px solid #ddd;
+  padding: 3em 0;
+}
+
+/** Logo **/
+.logo {
+  float: left;
+  font-size: 2em;
+  font-weight: 400;
+}
+
+/** Main Menu **/
+.menu {
+  float: right;
+}
+.menu li {
+  list-style: none;
+  float: left;
+}
+.menu li a {
+  display: block;
+  padding: .5em 2em;
+}
+.menu li a.is-active {
+  background: #0e7db4;
+  color: #fff;
+  border-radius: .3em;
+}
+
+/** Global headline and text **/
+.headline {
+  font-size: 1.5em;
+  font-weight: 400;
+  padding: 1.5em 0;
+  border-bottom: 2px solid #ddd;
+}
+.text {
+  padding: 1.5em 0;
+  font-size: 1em;
+  line-height: 1.5em;
+}
+.text p {
+  margin-bottom: 1.5em;
+}
+
+/** Shared App Styles **/
+.app-header {
+  position: relative;
+  padding-left: 5em;
+}
+.app-logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4em;
+  height: 4em;
+  border: 2px solid #ddd;
+  text-align: center;
+  border-radius: 50%;
+  padding: .5em;
+}
+.app-logo a {
+  display: block;
+  height: 100%;
+}
+.app-logo img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.app-title {
+  font-size: 1em;
+  margin-bottom: .25em;
+}
+.app-category {
+  font-size: .9em;
+  font-weight: 400;
+  color: #999;
+  margin-bottom: 1em;
+}
+.app-install-button {
+  background: #666;
+  border: 0;
+  font-weight: 600;
+  padding: .5em 1em;
+  border-radius: .3em;
+  color: #fff;
+}
+
+/** App list **/
+.apps .app {
+  border-bottom: 2px solid #ddd;
+  padding: 1.5em 0;
+}
+
+/** App Details **/
+.app-details {
+  padding: 1.5em 0;
+}
+.app-details .app-header {
+  margin-bottom: 1.5em;
+}
+.app-details .app-text {
+  border-top: 2px solid #ddd;
+}

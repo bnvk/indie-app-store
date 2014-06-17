@@ -1,0 +1,7 @@
+Title: Mailpile
+----
+Category: Mail
+----
+Link: http://mailpile.is
+----
+Text: A modern, fast web-mail client with user-friendly encryption and privacy features.
