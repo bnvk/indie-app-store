@@ -35,7 +35,7 @@ a {
 
 /** Main Header **/
 .header {
-  padding: 1em 3em;
+  padding: 0.8em 3em;
   display: flex;
   align-items: center;
   background: linear-gradient(hsl(200,2%,100%), hsl(200,2%,97%));
