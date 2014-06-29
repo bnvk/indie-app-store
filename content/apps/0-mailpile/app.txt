@@ -1,7 +1,21 @@
 Title: Mailpile
 ----
-Category: Mail
+Version: 0.1.0
 ----
-Link: http://mailpile.is
+Category: Email Clients,PGP
 ----
-Text: A modern, fast web-mail client with user-friendly encryption and privacy features.
+Operating Systems: BSD,GNU/Linux,OS X,Windows
+----
+Link: /
+----
+Source_Link: https://github.com/pagekite/mailpile
+----
+Licence_Link: https://raw.github.com/pagekite/Mailpile/master/LICENSE-2.0.txt
+----
+Text: Mailpile offers powerful search & tagging makes your pile of mail managable, is designed to be fast and responsive, outperforming the cloud even on slow computers, and offers OpenPGP signatures and encryption are part of Mailpile's core design, not an afterthought or plugin.
+---
+ICON_512: logo_512.png
+----
+ICON_256: logo_256.png
+----
+ICON_100: logo_100.png
