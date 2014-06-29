@@ -105,6 +105,9 @@ a {
   max-width: 100%;
   max-height: 100%;
 }
+.app .app-meta {
+  flex: 1;
+}
 .app-title {
   font-size: .9em;
   margin-bottom: .25em;
@@ -114,6 +117,12 @@ a {
   font-weight: 400;
   color: #999;
   margin-bottom: .4em;
+}
+.app-title,
+.app-category {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .app-install-button {
   background: none;
@@ -165,10 +174,11 @@ a {
 .apps .app,
 .categories .category {
   padding: 1em;
+  width: 15em;
 }
 .apps .app + .app,
 .categories .category + .category {
-  border-left: 1px solid rgba(0,0,0,.13);
+  /*border-left: 1px solid rgba(0,0,0,.13);*/
 }
 .app-category .name {
   
