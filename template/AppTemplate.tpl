@@ -13,5 +13,5 @@ Source_Link: {{APP_SOURCE_URL}}
 Licence_Link: {{APP_LICENSE_URL}}
 ----
 Text: {{APP_DESCRIPTION}}
----
+----
 {{APP_ICONS}}
