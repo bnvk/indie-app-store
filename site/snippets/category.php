@@ -4,7 +4,7 @@
   $apps = array();
 
   foreach(page('apps')->children()->visible() as $app){
-    if($app->category()->value == $category){
+    if(in_array($category, explode(',', $app->category()->value))){
       $apps[] = $app;
     }
   }

@@ -10,8 +10,10 @@
   $categories = array();
   $apps = page('apps')->children()->visible();
 
-  foreach($apps as $app)
-    $categories[] = $app->category()->value;
+  foreach($apps as $app){
+    $app_categories = explode(",", $app->category()->value);
+    $categories = array_merge($categories, $app_categories);
+  }
 
   $categories = array_unique($categories);
 
