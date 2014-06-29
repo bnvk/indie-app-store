@@ -25,7 +25,6 @@ img {
 body {
   font-family: Helvetica, Arial, sans-serif;
   font-size: 100%;
-  max-width: 50em;
   margin: 0 auto 9em;
 }
 
@@ -36,33 +35,37 @@ a {
 
 /** Main Header **/
 .header {
-  border-bottom: 2px solid #ddd;
-  padding: 3em 0;
+  padding: 1em 3em;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(hsl(200,2%,100%), hsl(200,2%,97%));
+  border-bottom: 1px solid rgba(0,0,0,.15);
+  box-shadow: 0 1px rgba(0,0,0,.03);
 }
 
 /** Logo **/
 .logo {
-  float: left;
-  font-size: 2em;
+  font-size: inherit;
   font-weight: 400;
 }
 
 /** Main Menu **/
 .menu {
-  float: right;
+  flex: 1;
+  display: flex;
+  justify-content: center;
 }
-.menu li {
-  list-style: none;
-  float: left;
-}
-.menu li a {
+.menu a {
   display: block;
   padding: .5em 2em;
 }
-.menu li a.is-active {
-  background: #0e7db4;
-  color: #fff;
+.menu a.is-active {
+  background: linear-gradient(hsl(200,2%,97%), hsl(200,2%,100%));
   border-radius: .3em;
+  box-shadow:
+    0 1px rgba(0,0,0,.03) inset,
+    0 0 0 1px rgba(0,0,0,.13),
+    0 2px white;
 }
 
 /** Global headline and text **/
@@ -84,18 +87,15 @@ a {
 /** Shared App Styles **/
 .app-header {
   position: relative;
-  padding-left: 5em;
+  display: flex;
 }
 .app-logo {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 4em;
   height: 4em;
   border: 2px solid #ddd;
-  text-align: center;
   border-radius: 50%;
   padding: .5em;
+  margin-right: 1em;
 }
 .app-logo a {
   display: block;
@@ -106,40 +106,80 @@ a {
   max-height: 100%;
 }
 .app-title {
-  font-size: 1em;
+  font-size: .9em;
   margin-bottom: .25em;
 }
 .app-category {
-  font-size: .9em;
+  font-size: .8em;
   font-weight: 400;
   color: #999;
-  margin-bottom: 1em;
+  margin-bottom: .4em;
 }
 .app-install-button {
-  background: #666;
-  border: 0;
+  background: none;
+  color: hsl(200,100%,50%);
   font-weight: 600;
   padding: .5em 1em;
   border-radius: .3em;
-  color: #fff;
+  border: 1px solid rgba(0,0,0,.08);
+  border-bottom-color: rgba(0,0,0,.1);
+  box-shadow: 0 1px rgba(0,0,0,.02);
+  outline: none;
+  cursor: pointer;
+}
+
+/** listing **/
+.app-details,
+.listing {
+  margin: 2em;
+  border-radius: .4em;
+  box-shadow: 0 1px rgba(0,0,0,.03);
+}
+.app-details .app-header,
+.listing-header {
+  background: linear-gradient(hsl(200,2%,100%), hsl(200,2%,97%));
+  border-radius: .4em .4em 0 0;
+  padding: .5em 1em;
+  border: 1px solid rgba(0,0,0,.1);
+  border-top-color: rgba(0,0,0,.07);
+  border-bottom-color: rgba(0,0,0,.15);
+  box-shadow: 0 1px rgba(0,0,0,.03);
+}
+.listing-header h2 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+.listing-body,
+.app-text {
+  border: 1px solid rgba(0,0,0,.13);
+  border-radius: 0 0 .4em .4em;
+  border-top: none;
 }
 
 /** App list **/
-.apps .app {
-  border-bottom: 2px solid #ddd;
-  padding: 1.5em 0;
-  display: inline-block;
-  width: 32%;
-  min-width: 200px;
+.apps,
+.categories {
+  display: flex;
+  flex-wrap: wrap;
+}
+.apps .app,
+.categories .category {
+  padding: 1em;
+}
+.apps .app + .app,
+.categories .category + .category {
+  border-left: 1px solid rgba(0,0,0,.13);
+}
+.app-category .name {
+  
 }
 
 /** App Details **/
 .app-details {
-  padding: 1.5em 0;
 }
 .app-details .app-header {
-  margin-bottom: 1.5em;
+  padding: 1em;
 }
 .app-details .app-text {
-  border-top: 2px solid #ddd;
+  padding: 2em 1em .5em;
 }
