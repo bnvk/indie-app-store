@@ -47,6 +47,12 @@ a {
 .logo {
   font-size: inherit;
   font-weight: 400;
+  display: flex;
+  align-items: center;
+}
+
+img.logo {
+  margin-right: 10px;
 }
 
 /** Main Menu **/
