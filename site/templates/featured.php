@@ -12,7 +12,6 @@
   // and take four random ones
   $apps = page('apps')->children()
                       ->visible()
-                      ->shuffle()
                       ->limit(4);
 
   snippet('apps', compact('apps'));
