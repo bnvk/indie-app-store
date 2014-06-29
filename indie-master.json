@@ -7,11 +7,17 @@
     "Micro Blogging",
     "Content Mangement",
     "Notes",
-    "Tools"
+    "Tools",
+    "Files",
+    "Sync",
+    "Calendar",
+    "Contacts",
+    "News"
   ],
   "apps": [
     "https://raw.githubusercontent.com/pagekite/Mailpile/master/indie.json",
     "https://raw.githubusercontent.com/socialigniter/socialigniter/master/indie.json",
-    "http://litewrite.net/indie.json"
+    "http://litewrite.net/indie.json",
+    "https://raw.githubusercontent.com/owncloud/core/indie-json/indie.json"
   ]
 }
