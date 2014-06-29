@@ -18,7 +18,13 @@ function httpGet($url) {
 	return array($body, $headers, $info);
 }
 
-function parseIndieWebApp_parse_icons($name,$icons){
+/**
+* Parses an array of icons
+* @param array $icons
+* @param string $name Application name
+* @return array
+*/
+function parseIndieWebApp_parse_icons($icons,$name){
   $resp = array();
   if(is_array($icons)){
     foreach($icons as $icon){
@@ -46,7 +52,13 @@ function parseIndieWebApp_parse_icons($name,$icons){
   return array("ICONS"=>implode("\n----\n",$resp_));
 }
 
-function parseIndieWebApp_parse_categories($name,$categories){
+/**
+* Parses an array of categories
+* @param array $categories
+* @param string $name Application name
+* @return array
+*/
+function parseIndieWebApp_parse_categories($categories,$name){
   $os = array();
   $categories_ = array();
   if(is_array($categories)){
@@ -68,6 +80,12 @@ function parseIndieWebApp_parse_categories($name,$categories){
   }
   return $resp;
 }
+/**
+* Take a json string representations of a IndieApp decodes, download the icons
+* and generates the content code for kirby
+* @param string $file_contents
+* @return array['name'=>App Name,'file'=>kirby content file]
+*/
 function parseIndieWebApp($file_contents){
   $appTemplate = 'template/AppTemplate.tpl';
   $manifest = json_decode($file_contents);
@@ -82,7 +100,7 @@ function parseIndieWebApp($file_contents){
     if(in_array($property,$properties)){
       $func = __NAMESPACE__ . '\parseIndieWebApp_parse_'.$property;
       if(function_exists($func)){
-        $value = $func($manifest->name,$value);
+        $value = $func($value,$manifest->name);
       }
     }
     if(is_string($value)){
