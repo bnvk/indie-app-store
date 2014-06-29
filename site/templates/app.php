@@ -7,7 +7,7 @@
   <div class="text app-text">
     <?php echo kirbytext($page->text()) ?>
     <p>
-      <strong><a href="<?php echo $page->link() ?>"><?php echo $page->link() ?></a></strong>
+      <strong><a href="<?php echo $page->source_link() ?>">Website</a></strong>
     </p>
   </div>
 

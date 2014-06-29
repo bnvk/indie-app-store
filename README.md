@@ -13,3 +13,8 @@ git submodule init; git submodule update # fetch Kirby
 cd kirby
 git submodule init; git submodule update # fetch Kirby dependencies
 ```
+
+Then compile to fetch the apps:
+```
+php compiler.php
+```

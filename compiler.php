@@ -33,11 +33,13 @@ function parseIndieWebApp_parse_icons($icons,$name){
       $extension = substr($icon_src,strrpos($icon_src,"."));
       $icon_src = "logo_{$size}{$extension}";
       $resp["ICON_".$size]=$icon_src;
-      $target_dir = "content/02-apps/0-".strtolower($name);
+      $target_dir = "content/apps/0-".strtolower($name);
       if(!file_exists($target_dir)){
           @mkdir($target_dir);
       }
       if(!file_exists("{$target_dir}/$icon_src")){
+        //TODO Check if the url is relative and fetch directly from the
+        //repository
         $fileGet = httpGet($icon->src);
         $mr = fopen("{$target_dir}/$icon_src",'w');
         fputs($mr,$fileGet[0]);
@@ -124,7 +126,7 @@ if(!empty($master->apps)){
     echo "Processing {$app}...\n";
     $file = httpGet($app);
     $indie = parseIndieWebApp($file[0]);
-    $target_dir = "content/02-apps/0-".strtolower($indie['name']);
+    $target_dir = "content/apps/0-".strtolower($indie['name']);
     if(!file_exists($target_dir)){
       @mkdir($target_dir);
     }

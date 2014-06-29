@@ -1,7 +1,0 @@
-Title: Kirby
-----
-Category: CMS
-----
-Link: http://getkirby.com
-----
-Text: Kirby is a file-based CMS. Easy to setup, easy to use, flexible as hell
