@@ -1,5 +1,0 @@
-Title: Help
-----
-Text:
-
-This is the placeholder content for the help page.
