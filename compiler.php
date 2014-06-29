@@ -1,4 +1,5 @@
 <?php
+
 namespace IndieWeb;
 
 function httpGet($url) {
@@ -97,7 +98,9 @@ function parseIndieWebApp($file_contents){
   return $resp;
 }
 
+
 $master = json_decode(file_get_contents('indie-master.json'));
+
 if(!empty($master->apps)){
   foreach($master->apps as $app){
     echo "Processing {$app}...\n";
@@ -112,4 +115,7 @@ if(!empty($master->apps)){
     fclose($mr);
     echo "\tOK\n";
   }
+}
+else{
+  echo "There is a problem with the indie-master.json file. Please check if the file is good\n";
 }

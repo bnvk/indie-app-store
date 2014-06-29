@@ -11,7 +11,7 @@
   ],
   "apps": [
     "https://raw.githubusercontent.com/pagekite/Mailpile/master/indie.json",
-    "https://raw.githubusercontent.com/socialigniter/socialigniter/master/indie.json"
+    "https://raw.githubusercontent.com/socialigniter/socialigniter/master/indie.json",
     "http://litewrite.net/indie.json"
   ]
 }
